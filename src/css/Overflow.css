@@ -1,0 +1,47 @@
+.cont1 {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+
+}
+
+.cont>img {
+    width: 100%;
+    height: 250px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .cont1 {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        margin-top: 20px;
+
+    }
+
+    .cont>img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .cont1 {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 20px;
+
+    }
+
+    .cont>img {
+        width: 100%;
+        height: 200px;
+    }
+}

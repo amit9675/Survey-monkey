@@ -1,0 +1,8 @@
+.main {
+    border: 5px solid blue;
+    text-align: center;
+}
+
+.main>Text {
+    border: 5px solid gray;
+}

@@ -1,0 +1,21 @@
+.image {
+    height: 450px;
+    padding-top: 20px;
+    flex: 3;
+
+
+}
+
+@media screen and (max-width: 780px) {
+    .image {
+        display: none;
+        border: 15px solid red;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image {
+        display: none;
+        border: 15px solid red;
+    }
+}
