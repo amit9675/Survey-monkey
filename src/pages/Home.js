@@ -40,9 +40,12 @@ import { CheckCircleIcon } from "@chakra-ui/icons"
 import PriceWrapper from "../components/Pricing"
 import '../css/Home.css'
 import Nav from '../components/Nav';
+import { useEffect } from 'react';
 export default function Home() {
+
     return (
         <>
+
             <Nav />
             <Stack paddingTop="50px" direction={{ base: 'column', md: 'row' }}>
                 <Flex p={8} flex={1} align={'center'} justify={'center'}>
@@ -50,12 +53,12 @@ export default function Home() {
                         <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                             <Text
                                 as={'span'}
-                                position={'relative'}
+                                // position={'relative'}
                                 _after={{
                                     content: "''",
                                     width: 'full',
                                     height: useBreakpointValue({ base: '20%', md: '30%' }),
-                                    position: 'absolute',
+                                    // position: 'absolute',
                                     bottom: 1,
                                     left: 0,
                                     bg: 'blue.400',
@@ -76,15 +79,18 @@ export default function Home() {
                             <Button
                                 rounded={'full'}
                                 bg={'blue.400'}
-
+                                // position="absolute"
                                 color={'white'}
+                                display={{ base: "none" }}
                                 _hover={{
                                     bg: 'blue.500',
                                 }}>
                                 Go Premium
                             </Button>
 
-                            <Button rounded={'full'}>Create Free Account</Button>
+                            <Button rounded={'full'}
+                                display={{ base: "none" }}
+                            >Create Free Account</Button>
                         </Stack>
                     </Stack>
                 </Flex>

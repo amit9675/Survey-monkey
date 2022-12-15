@@ -16,6 +16,7 @@ import {
     useColorMode,
     Center,
 } from '@chakra-ui/react';
+import AlertS from '../components/AlertS'
 import { useAuth0 } from "@auth0/auth0-react";
 import { AddIcon } from "@chakra-ui/icons"
 import {
@@ -50,6 +51,7 @@ export default function Nav() {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+
     return (
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%'>
@@ -66,7 +68,7 @@ export default function Nav() {
                             </Button>
 
                             <Menu>
-                                {isAuthenticated && <div><Button colorScheme='blue'>{user.name}</Button>
+                                {/* {isAuthenticated && <div><Button colorScheme='blue'>{user.name}</Button>
 
                                 </div>}
                                 {isAuthenticated ? (
@@ -74,8 +76,10 @@ export default function Nav() {
 
                                 ) :
                                     <Button onClick={() => loginWithRedirect()} colorScheme='blue'>Login</Button>
-                                }
+                                } */}
 
+                                <Button onClick={() => loginWithRedirect()} colorScheme='blue'>Login</Button>
+                                {/* <Button><AlertS /></Button> */}
 
 
                                 {/* <button >Log In</button>; */}
@@ -99,7 +103,7 @@ export default function Nav() {
                                         />
                                     </MenuButton>
 
-                                    <MenuList alignItems={'center'}>
+                                    <MenuList alignItems={'center'} >
                                         <br />
                                         <Center>
                                             <Avatar
@@ -113,9 +117,10 @@ export default function Nav() {
                                         </Center>
                                         <br />
                                         <MenuDivider />
-                                        <MenuItem>{user.email_verified}</MenuItem>
+                                        <MenuItem>{user.email}</MenuItem>
                                         <MenuItem>Account Settings</MenuItem>
-                                        <MenuItem><Button onClick={() => logout({ returnTo: window.location.origin })} colorScheme='blue'>Log out</Button></MenuItem>
+                                        <MenuItem><AlertS /></MenuItem>
+                                        {/* <MenuItem><Button onClick={() => logout({ returnTo: window.location.origin })} colorScheme='blue'>Log out</Button></MenuItem> */}
                                     </MenuList>
                                 </div>}
                             </Menu>

@@ -10,6 +10,7 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const options = [
@@ -70,12 +71,20 @@ const PackageTier = ({
             </List>
             <Heading size={'xl'}>{typePlan}</Heading>
             <Stack>
-                <Button
+                {/* <Button
                     size="md"
                     color={useColorModeValue(colorTextLight, colorTextDark)}
                     bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
                     See all plans
-                </Button>
+                </Button> */}
+                <RouterLink to='/payment'>
+                    <Button
+                        size="md"
+                        color={useColorModeValue(colorTextLight, colorTextDark)}
+                        bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
+                        Buy Now
+                    </Button>
+                </RouterLink>
             </Stack>
         </Stack>
     );

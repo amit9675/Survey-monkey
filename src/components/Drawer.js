@@ -13,12 +13,15 @@ import {
     Input,
     Icon
 } from '@chakra-ui/react'
+import { Navigate } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 import { Link as RouterLink, Router } from 'react-router-dom';
 import React from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 function Drawers() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
+    const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
     return (
         <>
@@ -41,6 +44,7 @@ function Drawers() {
                         backgroundPosition="center"
                         backgroundRepeat="no-repeat"
                         backgroundSize="cover">
+
                         <RouterLink to='/products'>
                             <Button bgColor='teal' variant='outline' w="100%" marginTop="100px">
                                 Products
@@ -55,13 +59,13 @@ function Drawers() {
                         <br /> <br /> <br />
                         <RouterLink to='/pricing'>
                             <Button bgColor='teal' variant='outline' w="100%">
-                                Resouces
+                                Pricing
                             </Button>
                         </RouterLink>
                         <br /> <br /> <br />
-                        {/* <Button bgColor='teal' variant='outline' w="100%" >
-                            Pricing
-                        </Button> */}
+                        <Button bgColor='teal' variant='outline' w="100%" >
+                            Resources
+                        </Button>
 
                     </DrawerBody>
 

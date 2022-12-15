@@ -1,31 +1,31 @@
-.image:hover {
+/* .image:hover {
     transform: scale(1.1);
-}
+} */
 
-.image {
+/* .image {
     width: 75%;
-    height: 250px;
+    height: 150px;
     margin: auto;
-}
+} */
 
-.box {
+/* .box {
     text-align: center;
     padding: 15px;
-}
+} */
 
-.box:hover {
+/* .box:hover {
     background-color: rgb(253, 245, 245);
     border: 3px solid orange;
     color: black;
-}
+} */
 
-.box2 {
+/* .box2 {
     border: 5px solid red;
-}
+} */
 
 @media screen and (max-width: 480px) {
-    .box2 {
+    /* .box2 {
         border: 8px solid rgb(97, 53, 64);
         display: block;
-    }
+    } */
 }

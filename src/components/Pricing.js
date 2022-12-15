@@ -12,6 +12,7 @@ import {
     ListIcon,
     Button,
 } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom'
 import { CheckCircleIcon, WarningIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 
 function PriceWrapper({ children }) {
@@ -103,9 +104,11 @@ export default function ThreeTierPricing() {
                             </ListItem>
                         </List>
                         <Box w="80%" pt={7}>
-                            <Button w="full" colorScheme="red" variant="outline">
-                                Start free trial
-                            </Button>
+                            <RouterLink to='/payment'>
+                                <Button w="full" colorScheme="red" variant="outline">
+                                    Buy Now
+                                </Button>
+                            </RouterLink>
                         </Box>
                     </VStack>
                 </PriceWrapper>
@@ -192,9 +195,11 @@ export default function ThreeTierPricing() {
                                 </ListItem>
                             </List>
                             <Box w="80%" pt={7}>
-                                <Button w="full" colorScheme="red">
-                                    Start trial
-                                </Button>
+                                <RouterLink to='/payment'>
+                                    <Button w="full" colorScheme="red" variant="outline">
+                                        Buy Now
+                                    </Button>
+                                </RouterLink>
                             </Box>
                         </VStack>
                     </Box>
@@ -255,9 +260,11 @@ export default function ThreeTierPricing() {
                             </ListItem>
                         </List>
                         <Box w="80%" pt={7}>
-                            <Button w="full" colorScheme="red" variant="outline">
-                                Start trial
-                            </Button>
+                            <RouterLink to='/payment'>
+                                <Button w="full" colorScheme="red" variant="outline">
+                                    Buy Now
+                                </Button>
+                            </RouterLink>
                         </Box>
                     </VStack>
                 </PriceWrapper>
