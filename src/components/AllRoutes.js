@@ -10,6 +10,7 @@ import NotFound from '../components/Notfound'
 import Private from '../components/Private'
 import Payment from '../components/Payment'
 import PaymentAlert from '../components/PaymentAlert'
+import Demo from '../components/Demo'
 function AllRoutes() {
     return (
         <div>
@@ -17,11 +18,15 @@ function AllRoutes() {
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/signup' element={<JoinOurTeam />} />
-                <Route path='/pricing' element={<Private> <Pricing /> </Private>} />
+                {/* <Route path='/pricing' element={<Private> <Pricing /> </Private>} />
                 <Route path='/products' element={<Private><Products /></Private>} />
                 <Route path='/solutions' element={<Private><Solutions /></Private>} />
-                <Route path='/payment' element={<Private><Payment /></Private>} />
-                {/* <Route path='/otpAuth' element={<PaymentAlert />} /> */}
+                <Route path='/payment' element={<Private><Payment /></Private>} /> */}
+                <Route path='/pricing' element={<Pricing />} />
+                <Route path='/products' element={<Products />} />
+                <Route path='/solutions' element={<Solutions />} />
+                <Route path='/payment' element={<Payment />} />
+                <Route path='/exlore' element={<Demo />} />
                 <Route path='/notfound' element={<NotFound />} />
             </Routes>
 

@@ -1,4 +1,5 @@
 import { useToast, WrapItem, Button, Wrap, useDisclosure, Box, Modal, ModalOverlay, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalFooter } from '@chakra-ui/react'
+import { Link as RouterLink } from 'react-router-dom'
 import React from 'react'
 // function PaymentAlert() {
 //     const toast = useToast()
@@ -38,7 +39,7 @@ function PaymentAlert() {
                
             </Box> */}
 
-            <Button mt={4} onClick={onOpen}>
+            <Button mt={4} onClick={onOpen} colorScheme="blue">
                 Verify OTP
             </Button>
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
@@ -55,7 +56,11 @@ function PaymentAlert() {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                             Close
                         </Button>
-
+                        <RouterLink to="/exlore">
+                            <Button colorScheme='blue' mr={3}>
+                                Explore your Features
+                            </Button>
+                        </RouterLink>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

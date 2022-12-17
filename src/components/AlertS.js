@@ -16,7 +16,7 @@ function AlertS() {
     const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
     return (
         <>
-            <Button colorScheme='red' onClick={onOpen}>
+            <Button w="100%" colorScheme='red' onClick={onOpen}>
                 Logout
             </Button>
 
@@ -42,7 +42,7 @@ function AlertS() {
                             {/* <Button colorScheme='red' onClick={onClose} ml={3} onClick={() => logout({ returnTo: window.location.origin })}>
                                 Logout
                             </Button> */}
-                            <Button onClick={() => logout({ returnTo: window.location.origin })} colorScheme='blue'>Log out</Button>
+                            <Button onClick={() => logout({ returnTo: window.location.origin })} colorScheme='red'>Log out</Button>
                         </AlertDialogFooter>
                     </AlertDialogContent>
                 </AlertDialogOverlay>

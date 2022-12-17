@@ -11,6 +11,7 @@ function OTPAlert() {
             {positions.map((position, i) => (
                 <WrapItem key={i}>
                     <Button
+                        colorScheme={"blue"}
                         onClick={() =>
                             toast({
                                 // title: `${position} toast`,

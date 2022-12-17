@@ -19,6 +19,7 @@ import {
 import AlertS from '../components/AlertS'
 import { useAuth0 } from "@auth0/auth0-react";
 import { AddIcon } from "@chakra-ui/icons"
+import Cookies from './Cookies';
 import {
     Popover,
     PopoverTrigger,
@@ -68,27 +69,15 @@ export default function Nav() {
                             </Button>
 
                             <Menu>
-                                {/* {isAuthenticated && <div><Button colorScheme='blue'>{user.name}</Button>
 
-                                </div>}
-                                {isAuthenticated ? (
-                                    <Button onClick={() => logout({ returnTo: window.location.origin })} colorScheme='blue'>Log out</Button>
+                                {/* <Cookies /> */}
 
-                                ) :
-                                    <Button onClick={() => loginWithRedirect()} colorScheme='blue'>Login</Button>
-                                } */}
-
-                                <Button onClick={() => loginWithRedirect()} colorScheme='blue'>Login</Button>
-                                {/* <Button><AlertS /></Button> */}
-
-
-                                {/* <button >Log In</button>; */}
-                                {/* <RouterLink to='/login'>
+                                <RouterLink to='/login'>
                                     <Button colorScheme='blue'>Login</Button>
-                                </RouterLink> */}
-                                {/* <RouterLink to='/signup'>
+                                </RouterLink>
+                                <RouterLink to='/signup'>
                                     <Button colorScheme='blue'>Get Started</Button>
-                                </RouterLink> */}
+                                </RouterLink>
                                 {isAuthenticated && <div>
 
                                     <MenuButton
@@ -113,13 +102,15 @@ export default function Nav() {
                                         </Center>
                                         <br />
                                         <Center>
-                                            <p>{user.name}</p>
+                                            {/* <p>{user.name}</p> */}
+                                            <Button colorScheme='blue'>{user.name}</Button>
                                         </Center>
                                         <br />
                                         <MenuDivider />
                                         <MenuItem>{user.email}</MenuItem>
                                         <MenuItem>Account Settings</MenuItem>
-                                        <MenuItem><AlertS /></MenuItem>
+                                        {/* <MenuItem><AlertS /></MenuItem> */}
+                                        <AlertS />
                                         {/* <MenuItem><Button onClick={() => logout({ returnTo: window.location.origin })} colorScheme='blue'>Log out</Button></MenuItem> */}
                                     </MenuList>
                                 </div>}

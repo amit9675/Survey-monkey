@@ -90,7 +90,7 @@ export default function Payment() {
 
                                             </div>
                                             <div >
-                                                <Text textAlign="center" fontSize="20px">Enter OTP Here</Text>
+                                                <Text paddingBottom="10px" textAlign="center" fontSize="20px">Enter OTP Here</Text>
                                                 <PinInput otp >
                                                     <PinInputField style={{ backgroundColor: "#1a202c", color: "white" }} />
                                                     <PinInputField style={{ backgroundColor: "#1a202c", color: "white" }} />
