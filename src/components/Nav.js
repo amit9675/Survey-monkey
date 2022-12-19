@@ -69,8 +69,8 @@ export default function Nav() {
                             </Button>
 
                             <Menu>
-
-                                <Cookies />
+                                {!isAuthenticated && <Cookies />}
+                                {/* <Cookies /> */}
 
                                 {/* <RouterLink to='/login'>
                                     <Button colorScheme='blue'>Login</Button>
