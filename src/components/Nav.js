@@ -70,14 +70,14 @@ export default function Nav() {
 
                             <Menu>
 
-                                {/* <Cookies /> */}
+                                <Cookies />
 
-                                <RouterLink to='/login'>
+                                {/* <RouterLink to='/login'>
                                     <Button colorScheme='blue'>Login</Button>
                                 </RouterLink>
                                 <RouterLink to='/signup'>
                                     <Button colorScheme='blue'>Get Started</Button>
-                                </RouterLink>
+                                </RouterLink> */}
                                 {isAuthenticated && <div>
 
                                     <MenuButton
